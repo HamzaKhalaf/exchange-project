@@ -60,6 +60,7 @@ const ExchangeHistory = ({ historyData, days, setDays, busy}) => {
           onChange={setDays}
           disableClearable
           options={['7', '14', '30']}
+          getOptionLabel={(option) => `${option} days`}
           sx={{ width: 300 }}
           renderInput={(params) => (
             <TextField required variant="standard" {...params} label="From" />
